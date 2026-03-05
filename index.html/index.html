@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartik Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:fixed;
+width:100%;
+top:0;
+}
+
+header h1{
+color:#38bdf8;
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:100vh;
+}
+
+.hero-text h2{
+font-size:40px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text p{
+margin:15px 0;
+color:#cbd5f5;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:white;
+}
+
+.hero img{
+width:250px;
+border-radius:50%;
+border:4px solid #38bdf8;
+}
+
+.about{
+text-align:center;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.project:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Kartik Portfolio</h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+
+<h2>Hello, I'm <span id="name"></span></h2>
+
+<p>A passionate <b>Full Stack Java Developer</b>.</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+<img src="C:\Users\karti\OneDrive\Pictures\kartik.jpeg" alt="profile">
+
+</section>
+
+
+
+<section id="about" class="about">
+
+<h2>About Me</h2>
+
+<p>
+I am Kartik Manohar Kamble, a passionate Full Stack Java Developer.
+I enjoy building responsive websites and web applications using modern technologies.
+My interests include Java development, web technologies, and data analytics.
+</p>
+
+</section>
+
+
+
+<section id="skills">
+
+<h2 style="text-align:center;">My Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Java</div>
+<div class="skill">Spring Boot</div>
+<div class="skill">SQL</div>
+
+</div>
+
+</section>
+
+
+
+<section id="projects">
+
+<h2 style="text-align:center;">My Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio built using HTML CSS and JavaScript.</p>
+</div>
+
+<div class="project">
+<h3>Sales Analysis Dashboard</h3>
+<p>Interactive dashboard for analyzing company sales using Tableau.</p>
+</div>
+
+<div class="project">
+<h3>Weather App</h3>
+<p>Web app showing live weather using API.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<p>Email: kartikkamble@email.com</p>
+
+<a class="btn" onclick="message()">Send Message</a>
+
+<p id="msg"></p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Kartik Manohar Kamble | Full Stack Java Developer</p>
+
+</footer>
+
+
+<script>
+
+let text="Kartik Manohar Kamble";
+let i=0;
+
+function typing(){
+if(i<text.length){
+document.getElementById("name").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,120);
+}
+}
+
+typing();
+
+
+function message(){
+document.getElementById("msg").innerHTML="Thanks for contacting me!";
+}
+
+</script>
+
+</body>
+</html>
